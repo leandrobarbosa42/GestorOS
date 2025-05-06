@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="509.0" prefWidth="671.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.telaCadastroAcaoController">
+   <children>
+      <Pane layoutX="23.0" layoutY="30.0" prefHeight="102.0" prefWidth="626.0" style="-fx-background-color: #dce5fa; -fx-background-radius: 20; -fx-border-color: #c3d2f7; -fx-border-radius: 20;">
+         <children>
+            <Label fx:id="labelCadastro" layoutX="72.0" layoutY="22.0" text="CADASTRO DE USUÁRIO" textFill="#0c47f5">
+               <font>
+                  <Font name="Arial Black" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="14.0" layoutY="179.0" prefHeight="311.0" prefWidth="626.0" style="-fx-background-color: #dce5fa; -fx-background-radius: 20; -fx-border-color: #c3d2f7; -fx-border-radius: 20;">
+         <children>
+            <Label fx:id="labelAcao" layoutX="133.0" layoutY="11.0" text="Qual ação deseja realizar?" textFill="#0f1422">
+               <font>
+                  <Font name="Arial Black" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelCadastrar" layoutX="109.0" layoutY="105.0" text="Cadastrar" textFill="#0c47f5">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelAlterar" layoutX="378.0" layoutY="105.0" text="Alterar/Deletar " textFill="#0c47f5">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelNovoUsuario" layoutX="92.0" layoutY="132.0" text="Novo usuário" textFill="#0c47f5">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelExisteUsuario" layoutX="370.0" layoutY="132.0" text="Usuário existente" textFill="#0c47f5">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="botaoNovoUsuario" layoutX="119.0" layoutY="193.0" mnemonicParsing="false" onAction="#cadastrar" prefHeight="80.0" prefWidth="80.0" style="-fx-cursor: hand;" />
+            <Button fx:id="botaoUsuarioExistente" layoutX="412.0" layoutY="193.0" mnemonicParsing="false" onAction="#alterar" prefHeight="80.0" prefWidth="80.0" style="-fx-cursor: hand;" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

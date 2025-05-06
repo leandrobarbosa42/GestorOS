@@ -1,0 +1,22 @@
+/bin/
+/.settings/
+/.classpath
+.project
+.buildpath
+build.fxbuild
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Logs e arquivos temporários
+*.log
+*.tmp
+
+# Arquivos gerados
+*.class
+
+# Ignore arquivos pessoais de configuração
+*.iml
+.idea/
+*.swp

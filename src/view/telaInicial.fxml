@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="telaInicial" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.telaInicialController">
+  <children>
+    <MenuBar fx:id="menuTelaInicial" VBox.vgrow="NEVER">
+      <menus>
+        <Menu fx:id="menuCadastro" mnemonicParsing="false" text="Cadastros">
+          <items>
+                  <MenuItem fx:id="menuCadastraOS" mnemonicParsing="false" text="Ordem de Serviço" />
+            <MenuItem fx:id="menuCadastraUsuario" disable="true" mnemonicParsing="false" onAction="#cadastroUsuario" text="Usuarios" visible="false" />
+            <MenuItem fx:id="menuCadastraCliente" mnemonicParsing="false" onAction="#cadastroCliente" text="Clientes" />
+            <MenuItem fx:id="menuCadastraServico" mnemonicParsing="false" text="Serviços" />
+          </items>
+        </Menu>
+        <Menu fx:id="menuBusca" mnemonicParsing="false" text="Buscas">
+          <items>
+            <MenuItem fx:id="menuBuscar" mnemonicParsing="false" text="Realizar buscas" />
+          </items>
+        </Menu>
+            <Menu fx:id="menuRelatorio" mnemonicParsing="false" text="Relatorios">
+               <items>
+                  <MenuItem fx:id="menuGeraRelatorio" disable="true" mnemonicParsing="false" text="Gerar relátorios" visible="false" />
+               </items>
+            </Menu>
+        <Menu fx:id="menuSobre" mnemonicParsing="false" text="Sobre" />
+            <Menu fx:id="menuSair" mnemonicParsing="false" text="Sair">
+               <items>
+            <MenuItem fx:id="menuDeslogar" mnemonicParsing="false" onAction="#sair" text="Deslogar" />
+               </items></Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="775.0" prefWidth="1193.0" VBox.vgrow="ALWAYS">
+      <children>
+            <Pane layoutX="225.0" layoutY="3.0" prefHeight="769.0" prefWidth="972.0" style="-fx-background-color: #dce5fa; -fx-background-radius: 20; -fx-border-color: #c3d2f7; -fx-border-radius: 20;" />
+            <ImageView fx:id="imgLogo" fitHeight="220.0" fitWidth="243.0" layoutX="-4.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icones/GOS22.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="labelGos" layoutX="56.0" layoutY="290.0" text="GOS">
+               <font>
+                  <Font name="Palatino Linotype Bold" size="48.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelGestos" layoutX="13.0" layoutY="346.0" text="Gestor de Ordens de Serviço">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelBemVindo" layoutX="67.0" layoutY="442.0" text="Bem-Vindo!">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelUsuario" alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="495.0" prefHeight="27.0" prefWidth="202.0" text="Jose do Santos Silva Perreira Junior" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="987.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelData" layoutX="51.0" layoutY="632.0" text="01/01/2025">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
